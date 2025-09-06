@@ -18,7 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const progressBarFill = document.querySelector('.progress-bar-fill');
     
     // Initialize Supabase
-    const supabase = window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.key);
+    const supabase = window.supabaseClient;
+    
+    if (!supabase) {
+        console.error('Supabase client not available');
+        showNotification(loginNotification, 'Database connection not available', 'error');
+        return;
+    }
     
     // Check if user is already logged in
     checkAuthStatus();

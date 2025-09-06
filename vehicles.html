@@ -395,7 +395,13 @@
     <script src="config.js"></script>
     <script>
         // Initialize Supabase
-        const supabase = window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.key);
+        try {
+            window.supabaseClient = window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.key);
+            console.log("Supabase client initialized successfully for vehicles page");
+        } catch (error) {
+            console.error("Failed to initialize Supabase client:", error);
+            window.supabaseClient = null;
+        }
     </script>
     <script src="vehicles.js"></script>
 </body>

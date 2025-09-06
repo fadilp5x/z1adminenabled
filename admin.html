@@ -407,6 +407,16 @@
 
     <!-- Configuration and Scripts -->
     <script src="config.js"></script>
+    <script>
+        // Initialize Supabase for admin
+        try {
+            window.supabaseClient = window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.key);
+            console.log("Supabase client initialized successfully for admin");
+        } catch (error) {
+            console.error("Failed to initialize Supabase client:", error);
+            window.supabaseClient = null;
+        }
+    </script>
     <script src="admin.js"></script>
 </body>
 </html>

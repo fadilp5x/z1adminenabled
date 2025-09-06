@@ -15,7 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             vehiclesGrid.innerHTML = '<div class="loading">Loading vehicles...</div>';
             
-            const { data, error } = await supabase
+            // Check if supabase client is available
+            if (!window.supabaseClient) {
+                console.error('Supabase client not available');
+                vehiclesGrid.innerHTML = '<div class="error">Database connection not available. Please try again later.</div>';
+                return;
+            }
+            
+            const { data, error } = await window.supabaseClient
                 .from('vehicles')
                 .select('*')
                 .order('order', { ascending: true })
