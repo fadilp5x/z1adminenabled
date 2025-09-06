@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Luxury Vehicle | Z1CRAS - Premium Car Rentals for UAE NRIs</title>
+    <meta name="description" content="Book your luxury car rental in Kerala with Z1CRAS. Special services for UAE NRIs returning home.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sand: #E2C799;
+            --gold: #D4AF37;
+            --deep-blue: #1A3A5F;
+            --pearl-white: #F8F6F0;
+            --terracotta: #C17F56;
+            --emerald: #1E8C5E;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--pearl-white);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cairo', sans-serif;
+            color: var(--deep-blue);
+        }
+        
+        /* Header Styles - Same as index.html */
+        .header {
+            background: linear-gradient(135deg, var(--deep-blue) 0%, #0d2340 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 50px;
+            margin-right: 1rem;
+        }
+        
+        .brand-name {
+            font-family: 'Cairo', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--gold);
+            letter-spacing: 0.05em;
+        }
+        
+        .tagline {
+            font-size: 0.9rem;
+            color: var(--sand);
+            margin-top: -5px;
+        }
+        
+        .uae-indicator {
+            background: var(--terracotta);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .uae-indicator i {
+            margin-right: 0.3rem;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--gold);
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info a {
+            color: white;
+            margin-left: 1.5rem;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: var(--gold);
+        }
+        
+        .contact-info i {
+            margin-right: 0.5rem;
+        }
+        
+        .lang-toggle {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            margin-left: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-toggle:hover {
+            background: var(--gold);
+            color: var(--deep-blue);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1554224712-d8560f709cbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 6rem 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--sand);
+        }
+        
+        /* Booking Process */
+        .booking-process {
+            padding: 3rem 0;
+            background: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #eee;
+            z-index: 1;
+        }
+        
+        .step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gold);
+            color: var(--deep-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .step h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--deep-blue);
+        }
+        
+        .step p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Booking Form Section */
+        .booking-form-section {
+            padding: 3rem 0;
+            background: var(--pearl-white);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--deep-blue);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .booking-form-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .form-container {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--deep-blue);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .radio-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .radio-label input {
+            margin-right: 0.5rem;
+        }
+        
+        .btn-submit {
+            background: var(--gold);
+            color: var(--deep-blue);
+            border: none;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 1rem;
+        }
+        
+        .btn-submit:hover {
+            background: var(--sand);
+            transform: translateY(-3px);
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        /* Info Section */
+        .info-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .info-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--deep-blue);
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        
+        .info-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--gold);
+        }
+        
+        .info-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .info-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .info-list i {
+            color: var(--gold);
+            margin-right: 1rem;
+            margin-top: 0.3rem;
+        }
+        
+        .contact-info {
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item i {
+            color: var(--gold);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            width: 30px;
+            text-align: center;
+        }
+        
+        /* NRI Special Section */
+        .nri-special {
+            background: linear-gradient(135deg, var(--deep-blue) 0%, #0d2340 100%);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        .nri-special .section-title h2,
+        .nri-special .section-title p {
+            color: white;
+        }
+        
+        .nri-special .section-title h2::after {
+            background: var(--gold);
+        }
+        
+        .nri-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .benefit-card p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* Footer - Same as index.html */
+        .footer {
+            background: var(--deep-blue);
+            color: white;
+            padding: 4rem 0 2rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--gold);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--gold);
+            color: var(--deep-blue);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item i {
+            color: var(--gold);
+            margin-right: 1rem;
+            margin-top: 0.3rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            text-decoration: none;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .booking-form-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .process-steps::before {
+                display: none;
+            }
+            
+            .step {
+                margin-bottom: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .contact-info {
+                display: none;
+            }
+            
+            .lang-toggle {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header - Same as index.html -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="https://i.ibb.co/hRKhMQgh/Whats-App-Image-2025-08-31-at-03-14-20-bc96ac1f-removebg-preview.png" alt="Z1CRAS Logo" class="logo">
+                <div>
+                    <div class="brand-name">Z1CRAS</div>
+                    <div class="tagline">Premium Car Rentals</div>
+                </div>
+                <div class="uae-indicator">
+                    <i class="fas fa-map-marker-alt"></i> UAE NRIs
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vehicles.html">Our Fleet</a></li>
+                <li><a href="book.html">Booking</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            
+            <div class="contact-info">
+                <a href="tel:+919645177177">
+                    <i class="fas fa-phone"></i> +91 96451 77177
+                </a>
+                <button class="lang-toggle">العربية</button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Book Your Luxury Vehicle</h1>
+            <p>Simple booking process designed for UAE NRIs returning to Kerala</p>
+        </div>
+    </section>
+    
+    <!-- Booking Process -->
+    <section class="booking-process">
+        <div class="container">
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Contact from UAE</h3>
+                    <p>Reach out via WhatsApp or call while still in the UAE</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Select Your Vehicle</h3>
+                    <p>Choose from our premium fleet tailored for NRI needs</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Complete Documentation</h3>
+                    <p>Simple paperwork process designed for NRIs</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Enjoy Your Ride</h3>
+                    <p>Vehicle ready upon your arrival in Kerala</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Booking Form Section -->
+    <section class="booking-form-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Reserve Your Luxury Vehicle</h2>
+                <p>Fill out the form below and our team will contact you to confirm your booking</p>
+            </div>
+            
+            <div class="booking-form-container">
+                <div class="form-container">
+                    <div class="success-message" id="success-message">
+                        <i class="fas fa-check-circle"></i> Thank you for your booking request! We will contact you shortly to confirm your reservation.
+                    </div>
+                    
+                    <form id="bookingForm">
+                        <input type="hidden" name="apikey" value="d237210c-71d2-464a-9ce4-24a83583dd98">
+                        <input type="hidden" name="subject" value="New Booking Request from Z1CRAS Website">
+                        <input type="hidden" name="from_name" value="Z1CRAS Booking Form">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Include country code" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="currentLocation">Current Location *</label>
+                            <select id="currentLocation" name="currentLocation" class="form-control" required>
+                                <option value="">Select your current location</option>
+                                <option value="uae">UAE (Dubai, Abu Dhabi, Sharjah, etc.)</option>
+                                <option value="other">Other International Location</option>
+                                <option value="kerala">Already in Kerala</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="vehicle">Preferred Vehicle *</label>
+                            <select id="vehicle" name="vehicle" class="form-control" required>
+                                <option value="">Select a vehicle</option>
+                                <option value="Range Rover Defender">Range Rover Defender</option>
+                                <option value="Range Rover Evoque">Range Rover Evoque</option>
+                                <option value="Range Rover Sport">Range Rover Sport</option>
+                                <option value="Porsche Cayenne">Porsche Cayenne</option>
+                                <option value="BMW X5">BMW X5</option>
+                                <option value="BMW X1">BMW X1</option>
+                                <option value="BMW 730D">BMW 730D</option>
+                                <option value="BMW 520D">BMW 520D</option>
+                                <option value="Mini Cooper Countryman D">Mini Cooper Countryman D</option>
+                                <option value="Mercedes GLS 350D">Mercedes GLS 350D</option>
+                                <option value="Mercedes GLE 250D">Mercedes GLE 250D</option>
+                                <option value="Mercedes E250">Mercedes E250</option>
+                                <option value="Mercedes GLA200">Mercedes GLA200</option>
+                                <option value="Audi Q7">Audi Q7</option>
+                                <option value="Audi Q5">Audi Q5</option>
+                                <option value="Audi Q3">Audi Q3</option>
+                                <option value="Audi A6">Audi A6</option>
+                                <option value="Audi A4">Audi A4</option>
+                                <option value="Audi A3">Audi A3</option>
+                                <option value="Mahindra Thar (Manual)">Mahindra Thar (Manual)</option>
+                                <option value="Mahindra Thar (Automatic)">Mahindra Thar (Automatic)</option>
+                                <option value="Toyota Fortuner Legender">Toyota Fortuner Legender</option>
+                                <option value="Toyota Fortuner Sigma">Toyota Fortuner Sigma</option>
+                                <option value="Toyota Fortuner Type 3">Toyota Fortuner Type 3</option>
+                                <option value="Toyota Fortuner Type 2">Toyota Fortuner Type 2</option>
+                                <option value="Toyota Fortuner Old Type">Toyota Fortuner Old Type</option>
+                                <option value="Toyota Innova Hycross ZXO">Toyota Innova Hycross ZXO</option>
+                                <option value="Toyota Innova Crysta GXO">Toyota Innova Crysta GXO</option>
+                                <option value="Maruti Suzuki Grand Vitara">Maruti Suzuki Grand Vitara</option>
+                                <option value="Maruti Suzuki Brezza">Maruti Suzuki Brezza</option>
+                                <option value="Maruti Suzuki Swift">Maruti Suzuki Swift</option>
+                                <option value="Maruti Suzuki Dzire">Maruti Suzuki Dzire</option>
+                                <option value="Maruti Suzuki A-Star">Maruti Suzuki A-Star</option>
+                                <option value="Honda Amaze">Honda Amaze</option>
+                                <option value="other">Other (Specify in comments)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="pickupDate">Pickup Date *</label>
+                                <input type="date" id="pickupDate" name="pickupDate" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="returnDate">Return Date *</label>
+                                <input type="date" id="returnDate" name="returnDate" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pickupLocation">Pickup Location in Kerala *</label>
+                            <input type="text" id="pickupLocation" name="pickupLocation" class="form-control" placeholder="Airport, hotel, or specific address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Do you need a driver? *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="driver" value="yes" required>
+                                    Yes
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="driver" value="no">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Additional Requirements</label>
+                            <textarea id="message" name="message" class="form-control" rows="4" placeholder="Any special requests or requirements"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Submit Booking Request</button>
+                    </form>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Why Book With Z1CRAS?</h3>
+                    <ul class="info-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Specialized service for UAE NRIs returning to Kerala</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Premium fleet of luxury vehicles</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Simple booking process from the UAE</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Flexible rental options for short and long-term needs</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Professional chauffeurs available upon request</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>24/7 customer support in English, Arabic, and Malayalam</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Phone:</strong><br>
+                                +91 96451 77177
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp:</strong><br>
+                                +91 96451 77177
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong><br>
+                                z1cardeals@gmail.com
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- NRI Special Section -->
+    <section class="nri-special">
+        <div class="container">
+            <div class="section-title">
+                <h2>Special Benefits for UAE NRIs</h2>
+                <p>Exclusive advantages for our valued customers from the UAE</p>
+            </div>
+            
+            <div class="nri-benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-plane-arrival"></i>
+                    </div>
+                    <h3>Airport Pickup</h3>
+                    <p>Complimentary airport transfer for bookings over 7 days</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>NRI Discounts</h3>
+                    <p>Special rates for UAE residents returning to Kerala</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Flexible Booking</h3>
+                    <p>Easy modifications for changing travel plans</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Dedicated Support</h3>
+                    <p>Personal assistance for NRI customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer - Same as index.html -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Z1CRAS</h3>
+                    <p>Premium car rental service connecting UAE NRIs with luxury transportation in Kerala. Experience the best of both worlds.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="vehicles.html">Our Fleet</a></li>
+                        <li><a href="book.html">Booking</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services for NRIs</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Airport Transfers</a></li>
+                        <li><a href="#">Long-term Rentals</a></li>
+                        <li><a href="#">Chauffeur Services</a></li>
+                        <li><a href="#">Wedding Transportation</a></li>
+                        <li><a href="#">Business Travel</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Kerala Office:</strong><br>
+                            123 Luxury Avenue, Kochi, Kerala
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            +91 96451 77177
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email:</strong><br>
+                            z1cardeals@gmail.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Z1CRAS. All rights reserved. Designed for UAE NRIs returning to Kerala.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919645177177" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <script>
+        // Form submission handler
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            
+            // Show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            
+            const formData = new FormData(form);
+            
+            // Send form data to Web3Forms
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show success message
+                    document.getElementById('success-message').style.display = 'block';
+                    
+                    // Reset the form
+                    form.reset();
+                    
+                    // Scroll to success message
+                    document.getElementById('success-message').scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                } else {
+                    alert('There was an error submitting your form. Please try again or contact us directly.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your form. Please try again or contact us directly.');
+            })
+            .finally(() => {
+                // Reset button state
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            });
+        });
+        
+        // Get vehicle parameter from URL if present
+        const urlParams = new URLSearchParams(window.location.search);
+        const vehicleParam = urlParams.get('vehicle');
+        if (vehicleParam) {
+            document.getElementById('vehicle').value = decodeURIComponent(vehicleParam);
+        }
+    </script>
+</body>
+</html>
